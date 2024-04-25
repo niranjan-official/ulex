@@ -2,32 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: 'Porter-Sans';
+    src: url('../public/assets/font/porter-sans/porter-sans-inline-block-webfont.eot');
+    src: url('../public/assets/font/porter-sans/porter-sans-inline-block-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../public/assets/font/porter-sans/porter-sans-inline-block-webfont.woff') format('woff'),
+         url('../public/assets/font/porter-sans/porter-sans-inline-block-webfont.ttf') format('truetype'),
+         url('../public/assets/font/porter-sans/porter-sans-inline-block-webfont.svg#porter_sans_blockblock') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  
+  .porter-sans {
+    font-family: 'Porter-Sans', sans-serif;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .str-video {
+    --str-video__primary-color: #6002ee;
+    --str-video__secondary-color: #90ee02;
+    --str-video__text-color1: #282b2b;
+    --str-video__border-radius-circle: 15px;
+    /* --str-video__icon--download: url('base64 encoded SVG') */
   }
-}
