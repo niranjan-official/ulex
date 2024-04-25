@@ -15,6 +15,7 @@ import { useUser } from "@clerk/nextjs";
 import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
+import { v4 as uuidv4 } from 'uuid';
 
 const HomeButtons = () => {
   const user = useUser();
@@ -39,7 +40,7 @@ const HomeButtons = () => {
         });
         return;
       }
-      const id = crypto.randomUUID();
+      const id = uuidv4();
       const call = client.call("default", id);
 
       if (!call) throw new Error("Failed to create call");
@@ -64,11 +65,11 @@ const HomeButtons = () => {
       toast({
         title: "Meeting Created",
       });
-    } catch (error:any) {
+    } catch (error: any) {
       console.log(error);
       toast({
         title: "Failed To Create meeting",
-        description: error.message
+        description: error.message,
       });
     }
   };

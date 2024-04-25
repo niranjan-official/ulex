@@ -18,7 +18,6 @@ const page = ({params:{id}}:{params:{id:string}}) => {
   return (
     <main className='h-screen w-full flex'>
       <StreamCall call={call}>
-
         <StreamTheme>
           {!isSetupComplete ?(
             <MeetingSetup setIsSetupComplete={setIsSetupComplete} />
