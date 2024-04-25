@@ -64,7 +64,7 @@ const HomeButtons = () => {
       toast({
         title: "Meeting Created",
       });
-    } catch (error) {
+    } catch (error:any) {
       console.log(error);
       toast({
         title: "Failed To Create meeting",
