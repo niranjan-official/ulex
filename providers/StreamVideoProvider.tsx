@@ -16,6 +16,8 @@ import { ReactNode, useEffect, useState } from 'react';
     const {user, isLoaded} = useUser();
 
     useEffect(()=>{
+      console.log(tokenProvider);
+      
       if(!isLoaded || !user) return;
       if(!apiKey) throw new Error("Stream API key missing");
 
@@ -23,13 +25,13 @@ import { ReactNode, useEffect, useState } from 'react';
         apiKey,
         user:{
           id: user?.id,
-          name: user?.username || user?.id,
+          name: user?.fullName || user?.id,
           image: user?.imageUrl
         },
         tokenProvider: tokenProvider
       })
-      console.log("Client: "+client);
-      console.log("User: "+user);
+      console.log(client);
+      console.log(user);
       
       
       setVideoClient(client);

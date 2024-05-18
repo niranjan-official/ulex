@@ -11,6 +11,7 @@ console.log(apiKey,apiSecret);
 
 export const tokenProvider = async() =>{
     const user = await currentUser();
+    
 
     if(!user) throw new Error("User not logged in");
     if(!apiKey) throw new Error("No API key");

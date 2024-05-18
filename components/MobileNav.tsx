@@ -53,6 +53,7 @@ const MobileNav = () => {
                   const isActive = pathname === obj.route;
                   return (
                     <Link
+                      key={key}
                       href={obj.route}
                       className="focus:outline-none focus:ring-0 transition-all duration-300"
                     >

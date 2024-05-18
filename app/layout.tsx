@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "ULEX",
   description: "Video Conference App",
+  icons:{
+    icon: '/assets/logo/ulex.svg'
+  }
 };
 
 export default function RootLayout({

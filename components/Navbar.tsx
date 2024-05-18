@@ -6,7 +6,7 @@ import NavList from "./NavList";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center px-4 sm:px-7 py-4 select-none">
+    <div className="flex justify-between items-center px-4 sm:px-7 py-4 select-none max-sm:shadow-md">
       <Image src={"/assets/logo/logo.svg"} width={150} height={100} alt="..." />
       <div className="flex items-center gap-16 sm:pt-4">
         <NavList />

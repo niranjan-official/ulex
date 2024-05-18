@@ -18,10 +18,10 @@ const page = () => {
         </p>
         <HomeButtons/>
       </div>
-      <div className="relative top-0 right-0 max-sm:hidden z-0">
+      <div className="relative top-0 right-0 max-md:hidden z-0">
         <Image src={"/assets/hero.svg"} width={500} height={800} alt="..." />
       </div>
-      <div className="absolute bottom-0 sm:hidden opacity-20 z-0 overflow-x-hidden">
+      <div className="absolute bottom-0 md:hidden opacity-20 z-0 overflow-x-hidden">
         <Image src={"/assets/hero.svg"} width={480} height={800} alt="..." />
       </div>
     </div>

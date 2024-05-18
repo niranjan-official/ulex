@@ -14,12 +14,16 @@ const NavList = () => {
         const isActive = pathname === link.route;
         return (
           <div
-            className={cn("flex items-center gap-1 pb-1 transition-all duration-300", {
-              "border-b-4 border-black": isActive,
-            })}
+            key={key}
+            className={cn(
+              "flex items-center gap-1 pb-1 transition-all duration-300",
+              {
+                "border-b-4 border-black": isActive,
+              }
+            )}
           >
             <Image src={link.imgUrl} height={20} width={20} alt="..." />
-            <Link style={{ fontWeight: 500 }} href={link.route}>
+            <Link className="sm:text-sm lg:text-[1rem] lg:font-semibold" href={link.route}>
               {link.title}
             </Link>
           </div>

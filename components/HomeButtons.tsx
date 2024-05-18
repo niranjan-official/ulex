@@ -15,7 +15,7 @@ import { useUser } from "@clerk/nextjs";
 import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const HomeButtons = () => {
   const user = useUser();
@@ -90,14 +90,23 @@ const HomeButtons = () => {
       </div>
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <button className="flex items-center gap-2 bg-black hover:bg-zinc-800 text-primary px-3 py-2 rounded-md">
-            <Image
-              src={"/assets/icons/add.svg"}
-              height={20}
-              width={20}
-              alt="..."
-            />
-            <span>Create new</span>
+          <button className="flex items-center gap-2 bg-black hover:bg-transparent text-primary hover:text-black hover:ring-2 ring-black px-3 py-2 rounded-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="size-7 icon icon-tabler icons-tabler-outline icon-tabler-plus"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 5l0 14" />
+              <path d="M5 12l14 0" />
+            </svg>
+            <span className="hover:fontipconfig
+            i-semibold">Create new</span>
           </button>
         </AlertDialogTrigger>
         <AlertDialogContent className="bg-gray-100 ">

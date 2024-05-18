@@ -15,6 +15,7 @@ const MeetingSetup = ({
   const call = useCall();
 
   useEffect(() => {
+  console.log("Meeting Setup 2");
     if (isMicCamOn) {
       call?.camera.disable();
       call?.microphone.disable();
