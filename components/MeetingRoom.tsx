@@ -18,7 +18,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { LayoutGrid, Users } from "lucide-react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import EndCallButton from "./EndCallButton";
 import Loader from "./Loader";
 
@@ -30,6 +30,7 @@ const MeetingRoom = () => {
   const [showParticpants, setShowParticpants] = useState(false);
   const searchParams = useSearchParams();
   const isPersonalRoom = !!searchParams.get('personal');
+  const Router = useRouter();
 
   const {useCallCallingState} = useCallStateHooks();
   const callingState = useCallCallingState();
@@ -60,8 +61,8 @@ const MeetingRoom = () => {
           <CallParticipantsList onClose={() => setShowParticpants(false)} />
         </div>
       </div>
-      <div className="fixed bottom-0 mt-4 w-full flex flex-wrap items-center justify-center sm:gap-5 text-white">
-        <CallControls />
+      <div className="fixed bottom-4 mt-4 w-full flex flex-wrap gap-2 items-center justify-center sm:gap-5 text-white px-2">
+        <CallControls  onLeave={()=>Router.push('/')} />
         <DropdownMenu>
           <DropdownMenuTrigger className="px-4 py-2 rounded-2xl bg-[#19232d] hover:bg-[#4c535b]">
             <LayoutGrid size={20} className="text-white" />

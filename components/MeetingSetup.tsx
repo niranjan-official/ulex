@@ -26,8 +26,7 @@ const MeetingSetup = ({
   }, [isMicCamOn, call?.camera, call?.microphone]);
   return (
     <div className="flex h-screen w-screen flex-col justify-center items-center text-black overflow-hidden">
-      <h1 className="text-2xl font-bold">MeetingSetup</h1>
-      <div className="my-4">
+      <div className="my-4 sm:mt-10">
         <VideoPreview />
       </div>
       <div className="flex flex-col h-16 items-center justify-center gap-3 mt-4">
@@ -47,7 +46,7 @@ const MeetingSetup = ({
             call?.join();
             setIsSetupComplete(true);
           }}
-          className="px-3 py-2 bg-black text-white mt-4"
+          className="px-3 py-2 bg-black text-white"
         >
           Join Meeting
         </button>
