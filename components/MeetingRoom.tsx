@@ -36,7 +36,7 @@ const MeetingRoom = () => {
   const callingState = useCallCallingState();
 
   if(callingState !== CallingState.JOINED) return <Loader/>
-
+  
   const CallLayout = () => {
     switch (layout) {
       case "grid":

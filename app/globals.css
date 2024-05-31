@@ -23,3 +23,9 @@
     --str-video__border-radius-circle: 15px;
     /* --str-video__icon--download: url('base64 encoded SVG') */
   }
+  @media(max-width:600px){
+      .str-video__speaker-layout{
+        display: flex;
+        flex-direction: column;
+      }
+  }

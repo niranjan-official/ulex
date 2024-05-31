@@ -46,7 +46,7 @@ const MeetingSetup = ({
             call?.join();
             setIsSetupComplete(true);
           }}
-          className="px-3 py-2 bg-black text-white"
+          className="px-3 py-2 bg-black rounded-[0.4rem] text-white"
         >
           Join Meeting
         </button>

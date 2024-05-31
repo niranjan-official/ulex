@@ -120,13 +120,13 @@ const HomeButtons = () => {
         </AlertDialogTrigger>
         <AlertDialogContent className="bg-gray-100">
           {callId ? (
-            <div className="w-full flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <BadgeCheck size={60} fill="black" className="text-white " />
               <span className="text-xl font-semibold">
                 Meeting Created Successfully
               </span>
-              <div className="w-full sm:w-4/5 flex items-center justify-between p-1 border-2 border-black rounded-[0.3rem] mt-4">
-                <Link size={30} className="text-black mx-2" />
+              <div className="sm:w-4/5 flex items-center justify-between p-1 border-2 border-black rounded-[0.3rem] mt-4">
+                {/* <Link size={30} className="text-black mx-2" /> */}
                 <p className="w-full line-clamp-1 text-sm pr-2" >{meetingLink}</p>
                 <button onClick={()=>{
                   navigator.clipboard.writeText(meetingLink)
