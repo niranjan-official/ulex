@@ -26,7 +26,7 @@ type CallLayoutType = "grid" | "speaker-right" | "speaker-left";
 
 const MeetingRoom = () => {
 
-  const [layout, setLayout] = useState<CallLayoutType>("speaker-left");
+  const [layout, setLayout] = useState<CallLayoutType>("grid");
   const [showParticpants, setShowParticpants] = useState(false);
   const searchParams = useSearchParams();
   const isPersonalRoom = !!searchParams.get('personal');
